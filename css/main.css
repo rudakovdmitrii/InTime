@@ -87,10 +87,55 @@ nav {
   width: 1280px;
   margin: 18px auto;
 }
-nav ul {
+.nav-inner>ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.nav-inner>ul>li {
+  position: relative;
+  padding-bottom: 5px;
+  
+}
+
+.nav-inner ul ul{
+  font: 15px 'rubik_mediumregular', sans-serif;
+  position: absolute;
+  top: 25px;
+  left: 1px;
+  background: #f5f8fb;
+  min-width: 150px;
+  z-index: 9;
+  display: none;
+}
+
+.pointer>ul>li {
+  
+  margin-bottom: 10px;
+  background: #ffe;
+}
+.pointer ul li a {
+  
+  padding: 10px;
+  display: block;
+  
+}
+
+.pointer:hover ul {
+  display: block;
+}
+.pointer>a {
+  position: relative;
+}
+.pointer>a:after {
+  position: absolute;
+  content: "";
+  background: url(../images/arrow.png);
+  width: 10px;
+  height: 7px;
+  top: 6px;
+  margin-left: 6px;
 }
 main {
   width: 1280px;
@@ -124,6 +169,8 @@ main {
   float: left;
 /*  border-bottom: 1px solid #e0e9f0; пока не нужен*/
 }
+
+
 .assortment-watch {
   font:  italic 20px/24px 'rubikitalic', sans-serif;
 }
